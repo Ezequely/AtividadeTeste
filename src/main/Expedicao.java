@@ -1,27 +1,14 @@
 package main;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Test;
-
-import test.TestCases;
-
 public class Expedicao {
 	
-	int bola;
-	int caixa;
+	Bola bola = new Bola();;
+	Caixa caixa = new Caixa();
 	
-	public boolean faixa(int medida) {
+	public boolean sedex(Bola bola, Caixa caixa){
 		boolean saida = false;
-		if(medida >= 1 && medida <= 10000)
+		if(bola.diametro <= caixa.altura && bola.diametro <= caixa.largura && bola.diametro <= caixa.profundidade)
 			saida = true;
 		return saida;
 	}
-	public boolean sedex(int bola, int caixa){
-		boolean saida = false;
-		if(bola <= caixa)
-			saida = true;
-		return saida;
-	}
-
 	}

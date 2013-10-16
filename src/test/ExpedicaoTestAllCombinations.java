@@ -22,34 +22,10 @@ public class ExpedicaoTestAllCombinations {
 	
 	@Test
 	public void T1() {
-			assertEquals("Medidas fora da Faixa", true,sedex.faixa(test[0][0]));
-			assertEquals("Medidas fora da Faixa", true,sedex.faixa(test[0][1]));
-			assertEquals("Medidas fora da Faixa", true,sedex.faixa(test[0][2]));
-			assertEquals("Medidas fora da Faixa", true,sedex.faixa(test[0][3]));
-			assertEquals("Bola não cabe na Caixa: Altura", true,sedex.sedex(test[0][0],test[0][1]));
-			assertEquals("Bola não cabe na Caixa: Largura", true,sedex.sedex(test[0][0],test[0][2]));
-			assertEquals("Bola não cabe na Caixa: Profundidade", true,sedex.sedex(test[0][0],test[0][3]));
+		caixa.altura = 1;
+		caixa.largura = 10001;
+		caixa.profundidade = 1;
+		bola.diametro = 1;
+		assertEquals(true, sedex.sedex(bola, caixa));
 	}
-	@Test
-
-	public void T2() {
-		assertEquals("Medidas fora da Faixa", true,sedex.faixa(test[3][0]));
-		assertEquals("Medidas fora da Faixa", true,sedex.faixa(test[3][1]));
-		assertEquals("Medidas fora da Faixa", true,sedex.faixa(test[3][2]));
-		assertEquals("Medidas fora da Faixa", true,sedex.faixa(test[3][3]));
-		assertEquals("Bola não cabe na Caixa: Altura", true,sedex.sedex(test[3][0],test[3][1]));
-		assertEquals("Bola não cabe na Caixa: Largura", true,sedex.sedex(test[3][0],test[3][2]));
-		assertEquals("Bola não cabe na Caixa: Profundidade", true,sedex.sedex(test[3][0],test[3][3]));
-}
-
-	@Test
-	public void T4() {
-		assertEquals("Medidas fora da Faixa", true,sedex.faixa(test[3][0]));
-		assertEquals("Medidas fora da Faixa", true,sedex.faixa(test[3][1]));
-		assertEquals("Medidas fora da Faixa", true,sedex.faixa(test[3][2]));
-		assertEquals("Medidas fora da Faixa", true,sedex.faixa(test[3][3]));
-		assertEquals("Bola não cabe na Caixa: Altura", true,sedex.sedex(test[3][0],test[3][1]));
-		assertEquals("Bola não cabe na Caixa: Largura", true,sedex.sedex(test[3][0],test[3][2]));
-		assertEquals("Bola não cabe na Caixa: Profundidade", true,sedex.sedex(test[3][0],test[3][3]));
-}
 }
