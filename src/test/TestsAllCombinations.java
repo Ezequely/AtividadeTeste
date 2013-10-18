@@ -11,7 +11,6 @@ public class ExpedicaoTestAllCombinations {
 	Bola bola = new Bola();
 	Caixa caixa = new Caixa();
 	Expedicao sedex = new Expedicao();
-	ExpedicaoTestPairwise t = new ExpedicaoTestPairwise();
 
 	
 	@Test
